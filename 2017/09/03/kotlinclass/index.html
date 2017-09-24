@@ -1,0 +1,545 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>kotlinclass | </title>
+    
+    
+    <meta name="description" content="kotlin class类结构 &amp;amp; 构造方法1234567891011121314151617181920212223//默认是final，添加open表示非final，可以继承//主构造方法,不建议这么写，有主构造方法时子类无法调用次要构造方法//[open ][public] class">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="kotlinclass"/>
+    <meta property="og:site_name" content="笔记"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="笔记" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">笔记</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="https://raw.githubusercontent.com/shengzhu1/shengzhu1.github.io/master/favicon.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">lushengzhu</p>
+                        <p class="desc">Android/Java/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/kotlin/">
+                    kotlin <span class="right">6 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/kotlin/">kotlin</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>kotlinclass</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2017-09-03T15:17:40.000Z"><a href="/2017/09/03/kotlinclass/">2017-09-03</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/kotlin/" class="chip pink lighten-1">kotlin</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#kotlin-class"><span class="section table-of-contents-text">kotlin class</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#类"><span class="section table-of-contents-text">类</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#结构-amp-构造方法"><span class="section table-of-contents-text">结构 & 构造方法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#open-–-gt-去掉final"><span class="section table-of-contents-text">open –> 去掉final</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#构造方法-amp-继承"><span class="section table-of-contents-text">构造方法 & 继承</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#重写父类方法"><span class="section table-of-contents-text">重写父类方法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#自欺欺人的属性覆盖"><span class="section table-of-contents-text">自欺欺人的属性覆盖</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#接口"><span class="section table-of-contents-text">接口</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#枚举"><span class="section table-of-contents-text">枚举</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#多继承"><span class="section table-of-contents-text">多继承</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#单例-–-gt-通过伴生对象实现"><span class="section table-of-contents-text">单例 –>通过伴生对象实现</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#匿名内部类-–-gt-object-ClassName-construstor"><span class="section table-of-contents-text">匿名内部类 –> object : ClassName construstor()</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#封闭类-Sealed-Class"><span class="section table-of-contents-text">封闭类(Sealed Class)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#伴生类-companion-object"><span class="section table-of-contents-text">伴生类 (companion object)</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#权限"><span class="section table-of-contents-text">权限</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#扩展函数"><span class="section table-of-contents-text">扩展函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#扩展属性-Extension-Property"><span class="section table-of-contents-text">扩展属性(Extension Property)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#对象表达式-–-gt-用于函数内，立即执行"><span class="section table-of-contents-text">对象表达式 –>用于函数内，立即执行</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#对象声明-–-gt-用户方法外，延迟执行"><span class="section table-of-contents-text">对象声明 –>用户方法外，延迟执行</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#类委托"><span class="section table-of-contents-text">类委托</span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="kotlin-class"><a href="#kotlin-class" class="headerlink" title="kotlin class"></a>kotlin class</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><h3 id="结构-amp-构造方法"><a href="#结构-amp-构造方法" class="headerlink" title="结构 &amp; 构造方法"></a>结构 &amp; 构造方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//默认是final，添加open表示非final，可以继承</span></div><div class="line"><span class="comment">//主构造方法,不建议这么写，有主构造方法时子类无法调用次要构造方法</span></div><div class="line"><span class="comment">//[open ][public] class DataUser [constructor]()</span></div><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">DataUser</span> <span class="keyword">constructor</span></span>(name : String) &#123;</div><div class="line">    init &#123;</div><div class="line">        <span class="comment">//初始化-在super()之后调用</span></div><div class="line">        println(<span class="string">"1:"</span>+System.nanoTime())</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// : this() 调用自身构造方法</span></div><div class="line">    <span class="comment">//次要构造方法</span></div><div class="line">    <span class="comment">//constructor([name : TypeName]*) : this([name : TypeName]*)</span></div><div class="line">    <span class="keyword">constructor</span>(name: String , age : <span class="built_in">Int</span>,parent: DataUser) : <span class="keyword">this</span>(name)&#123;</div><div class="line">        <span class="comment">//在init之后调用</span></div><div class="line">        println(<span class="string">"0:"</span>+System.nanoTime())</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildUser</span></span>(name: String): DataUser(name) &#123;</div><div class="line">    <span class="comment">// 子类只能调用父类主构造方法</span></div><div class="line"><span class="comment">//    constructor(name: String, age : Int) : super(name, age)</span></div><div class="line">&#125;</div><div class="line">kotlin 有一个主构造方法多个次要构造方法,子类构造方法无法使用父类次要构造方法</div></pre></td></tr></table></figure>
+<h3 id="open-–-gt-去掉final"><a href="#open-–-gt-去掉final" class="headerlink" title="open –&gt; 去掉final"></a>open –&gt; 去掉final</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在class上添加，允许继承</span></div><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">DataUser</span></span>&#123;</div><div class="line"><span class="comment">//在方法上添加，允许重写，重写需要加override</span></div><div class="line"> <span class="keyword">open</span> <span class="function"><span class="keyword">fun</span> <span class="title">noFinal</span><span class="params">()</span></span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="构造方法-amp-继承"><a href="#构造方法-amp-继承" class="headerlink" title="构造方法 &amp; 继承"></a>构造方法 &amp; 继承</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">DataUser</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(name: String) : <span class="keyword">this</span>(name)</div><div class="line">    <span class="keyword">constructor</span>(name: String , age : <span class="built_in">Int</span>,parent: DataUser) : <span class="keyword">this</span>(name)</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildUser</span> : <span class="type">DataUsers&#123;</span></span></div><div class="line">    <span class="keyword">constructor</span>(name: String) : <span class="keyword">super</span>(name)</div><div class="line">    <span class="keyword">constructor</span>(name: String , age : <span class="built_in">Int</span>,parent: DataUser) : <span class="keyword">super</span>(name)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="重写父类方法"><a href="#重写父类方法" class="headerlink" title="重写父类方法"></a>重写父类方法</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//继承</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperClass</span> </span>&#123;</div><div class="line">    <span class="keyword">open</span> <span class="function"><span class="keyword">fun</span> <span class="title">get</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildClass</span> : <span class="type">SuperClass  &#123;</span></span></div><div class="line">    <span class="comment">// 重写必须带override</span></div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">get</span><span class="params">()</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="自欺欺人的属性覆盖"><a href="#自欺欺人的属性覆盖" class="headerlink" title="自欺欺人的属性覆盖"></a>自欺欺人的属性覆盖</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实际上编译之后属性并没有改变，只是复写了get方法，覆盖了get,不信你用super.x试试</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Foo</span> </span>&#123;</div><div class="line">    <span class="keyword">val</span> count: <span class="built_in">Int</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar1</span></span>(<span class="keyword">override</span> <span class="keyword">val</span> count: <span class="built_in">Int</span>) : Foo</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar2</span> : <span class="type">Foo &#123;</span></span></div><div class="line">    <span class="keyword">override</span> <span class="keyword">var</span> count: <span class="built_in">Int</span> = <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法可以有默认实现,实际是写了默认实现类</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Foo</span> </span>&#123;</div><div class="line"> <span class="function"><span class="keyword">fun</span> <span class="title">f</span><span class="params">()</span></span></div><div class="line"> <span class="function"><span class="keyword">fun</span> <span class="title">b</span><span class="params">()</span></span>&#123;</div><div class="line">    printlb(<span class="string">"default"</span>)</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义和java一样</span></div><div class="line"><span class="keyword">enum</span> <span class="class"><span class="keyword">class</span> <span class="title">Direction</span> </span>&#123;</div><div class="line">    NORTH, SOUTH, WEST, EAST</div><div class="line">&#125;</div><div class="line"><span class="comment">//EemuClass.valueOf("NORTH")</span></div><div class="line"><span class="keyword">var</span> dir = Direction.valueOf(<span class="string">"NORTH"</span>)</div></pre></td></tr></table></figure>
+<h2 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</div><div class="line">    <span class="keyword">open</span> <span class="function"><span class="keyword">fun</span> <span class="title">f</span><span class="params">()</span></span> &#123; print(<span class="string">"A"</span>) &#125;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">a</span><span class="params">()</span></span> &#123; print(<span class="string">"a"</span>) &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">B</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">f</span><span class="params">()</span></span> &#123; print(<span class="string">"B"</span>) &#125; <span class="comment">// 接口的成员默认是 'open' 的</span></div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">b</span><span class="params">()</span></span> &#123; print(<span class="string">"b"</span>) &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span></span>() : A(), B &#123;</div><div class="line">    <span class="comment">// 编译器要求 f() 方法必须覆盖:</span></div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">f</span><span class="params">()</span></span> &#123;</div><div class="line">        <span class="keyword">super</span>&lt;A&gt;.f() <span class="comment">// 调用 A.f()</span></div><div class="line">        <span class="keyword">super</span>&lt;B&gt;.f() <span class="comment">// 调用 B.f()</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="单例-–-gt-通过伴生对象实现"><a href="#单例-–-gt-通过伴生对象实现" class="headerlink" title="单例 –&gt;通过伴生对象实现"></a>单例 –&gt;通过伴生对象实现</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用伴生对象</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singlton</span> <span class="keyword">private</span> <span class="keyword">constructor</span></span>()&#123;</div><div class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</div><div class="line">        <span class="keyword">val</span> INSTANCE = Singlton()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//使用object表达式 </span></div><div class="line"><span class="keyword">object</span> Inner2 : Inner&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">action</span><span class="params">()</span></span> &#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="匿名内部类-–-gt-object-ClassName-construstor"><a href="#匿名内部类-–-gt-object-ClassName-construstor" class="headerlink" title="匿名内部类 –&gt; object : ClassName construstor()"></a>匿名内部类 –&gt; object : ClassName construstor()</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">var</span> inner : Inner = <span class="keyword">object</span> : Inner&#123;</div><div class="line">        <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">action</span><span class="params">()</span></span> &#123;</div><div class="line">            println(<span class="string">"action"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    inner.action()</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Inner</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">action</span><span class="params">()</span></span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="封闭类-Sealed-Class"><a href="#封闭类-Sealed-Class" class="headerlink" title="封闭类(Sealed Class)"></a>封闭类(Sealed Class)</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//== abstract + [private constructor]</span></div><div class="line"> <span class="comment">//可以使用内部</span></div><div class="line"><span class="keyword">sealed</span> <span class="class"><span class="keyword">class</span> <span class="title">name</span></span>&#123;</div><div class="line">    <span class="keyword">constructor</span>()&#123;</div><div class="line">        print(<span class="number">1</span>)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//非static</span></div><div class="line">    <span class="keyword">var</span> a : String? = <span class="literal">null</span></div><div class="line">    <span class="comment">//public static final</span></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Const</span> : <span class="type">SealedTest</span></span>()</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Const2</span> : <span class="type">SealedTest</span></span>()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="伴生类-companion-object"><a href="#伴生类-companion-object" class="headerlink" title="伴生类 (companion object)"></a>伴生类 (companion object)</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//会生成一个public static final class Companion,并且构造方法私有化</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</div><div class="line"><span class="comment">// Test会持有一个public static final Companion对象</span></div><div class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</div><div class="line">        <span class="comment">//属性会外提到Test</span></div><div class="line">        const <span class="keyword">val</span> i = <span class="number">1</span>;</div><div class="line">        <span class="keyword">var</span> j = <span class="number">2</span>;</div><div class="line">        <span class="function"><span class="keyword">fun</span> <span class="title">get</span><span class="params">()</span></span> : <span class="built_in">Int</span> = <span class="number">3</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">        println(i)</div><div class="line">        <span class="comment">//实际是调用Companion对象的.getJ()</span></div><div class="line">        println(j)</div><div class="line">        println(<span class="keyword">get</span>())</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在top-level,包括包名名下</div><div class="line">如果你不指定任何可见度修饰符, 默认会使用 public, 其含义是, 你声明的东西在任何位置都可以访问;</div><div class="line">如果你将声明的东西标记为 private, 那么它将只在同一个源代码文件内可以访问;</div><div class="line">如果标记为 internal, 那么它将在同一个模块(module)内的任何位置都可以访问;</div><div class="line">对于顶级(top-level)声明, protected 修饰符是无效的.</div></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span>  <span class="title">PrivateTest</span></span>&#123;&#125;</div><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span>  <span class="title">ProtectedTest</span></span>&#123;&#125;</div><div class="line"><span class="keyword">internal</span> <span class="class"><span class="keyword">class</span>  <span class="title">InternalTest</span></span>&#123;&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span>  <span class="title">PublicTest</span></span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DefaultTest</span></span>&#123;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">在class和interface内</div><div class="line">private 表示只在这个类(以及它的所有成员)之内可以访问;</div><div class="line">protected — 与 private 一样, 另外在子类中也可以访问;</div><div class="line">internal — 在 本模块之内, 凡是能够访问到这个类的地方, 同时也能访问到这个类的 internal 成员;</div><div class="line">public — 凡是能够访问到这个类的地方, 同时也能访问这个类的 public 成员.</div></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">val</span> a = <span class="number">1</span></div><div class="line">    <span class="keyword">protected</span> <span class="keyword">open</span> <span class="keyword">val</span> b = <span class="number">2</span></div><div class="line">    <span class="keyword">internal</span> <span class="keyword">val</span> c = <span class="number">3</span></div><div class="line">    <span class="keyword">val</span> d = <span class="number">4</span>  <span class="comment">// 默认为 public</span></div><div class="line">    </div><div class="line">    <span class="keyword">protected</span> <span class="class"><span class="keyword">class</span> <span class="title">Nested</span> </span>&#123;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">val</span> e: <span class="built_in">Int</span> = <span class="number">5</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Subclass</span> : <span class="type">Outer</span></span>() &#123;</div><div class="line">    <span class="comment">// a 不可访问</span></div><div class="line">    <span class="comment">// b, c 和 d 可以访问</span></div><div class="line">    <span class="comment">// Nested 和 e 可以访问</span></div><div class="line"></div><div class="line">    <span class="keyword">override</span> <span class="keyword">val</span> b = <span class="number">5</span>   <span class="comment">// 'b' 可见度为 protected</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Unrelated</span></span>(o: Outer) &#123;</div><div class="line">    <span class="comment">// o.a, o.b 不可访问</span></div><div class="line">    <span class="comment">// o.c 和 o.d 可以访问(属于同一模块)</span></div><div class="line">    <span class="comment">// Outer.Nested 不可访问, Nested::e 也不可访问</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实际操作是底层持有了调用的对象</span></div><div class="line"><span class="function"><span class="keyword">fun</span> TpyeName.<span class="title">method</span><span class="params">()</span></span>&#123;&#125;</div><div class="line"><span class="comment">//demo== int add(int $receiver, int other)</span></div><div class="line"><span class="comment">//加？表示可空 </span></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="built_in">Int</span>?.<span class="title">add</span><span class="params">(other : <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span>&#123;&#125;</div></pre></td></tr></table></figure>
+<h3 id="扩展属性-Extension-Property"><a href="#扩展属性-Extension-Property" class="headerlink" title="扩展属性(Extension Property)"></a>扩展属性(Extension Property)</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实际操作是底层持有了调用的对象,实际也是添加了get方法</span></div><div class="line"><span class="comment">// 对于扩展属性不允许存在初始化器</span></div><div class="line"><span class="keyword">val</span> &lt;T&gt; List&lt;T&gt;?.lastIndex: <span class="built_in">Int</span></div><div class="line">    <span class="keyword">get</span>() = size - <span class="number">1</span></div></pre></td></tr></table></figure>
+<h3 id="对象表达式-–-gt-用于函数内，立即执行"><a href="#对象表达式-–-gt-用于函数内，立即执行" class="headerlink" title="对象表达式 –&gt;用于函数内，立即执行"></a>对象表达式 –&gt;用于函数内，立即执行</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1、匿名内部类 object className demo在上面</span></div><div class="line"><span class="keyword">var</span> inner : Inner = <span class="keyword">object</span> : Inner&#123;</div><div class="line">        <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">action</span><span class="params">()</span></span> &#123;</div><div class="line">            println(<span class="string">"action"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//2、 不写基类默认基础object</span></div><div class="line"><span class="keyword">val</span> adHoc = <span class="keyword">object</span> &#123;</div><div class="line">    <span class="keyword">var</span> x: <span class="built_in">Int</span> = <span class="number">0</span></div><div class="line">    <span class="keyword">var</span> y: <span class="built_in">Int</span> = <span class="number">0</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="对象声明-–-gt-用户方法外，延迟执行"><a href="#对象声明-–-gt-用户方法外，延迟执行" class="headerlink" title="对象声明 –&gt;用户方法外，延迟执行"></a>对象声明 –&gt;用户方法外，延迟执行</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对象申明都是单例，并且直接使用类名就会自动调用单例对象</span></div><div class="line"><span class="comment">//比如 Adapter.setData() 实际调用Adapter.INSTANCE.setData() </span></div><div class="line"><span class="comment">//对象声明：调用到才会初始化</span></div><div class="line"><span class="keyword">object</span> Adapter &#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">setData</span><span class="params">()</span></span> &#123;&#125;</div><div class="line">    <span class="keyword">var</span> count:<span class="built_in">Int</span> = <span class="number">0</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//对象申明可以继承和实现类，但是最后基类不要有主要构造，或者主要构造中不需要传值</span></div><div class="line"><span class="keyword">object</span> Inner2 : Inner&#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">action</span><span class="params">()</span></span> &#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="类委托"><a href="#类委托" class="headerlink" title="类委托"></a>类委托</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Derived 实现了Base，并将事情委托给BaseImpl2</span></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Base</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">print</span><span class="params">()</span></span></div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseImpl2</span></span>(<span class="keyword">val</span> x: <span class="built_in">Int</span>) : Base &#123;</div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">print</span><span class="params">()</span></span> &#123; print(x) &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span></span>(b: Base) : Base <span class="keyword">by</span> b</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> b = BaseImpl2(<span class="number">10</span>)</div><div class="line">    Derived(b).print() <span class="comment">// 打印结果为: 10</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+                
+<p class="pink-link-context">
+    <a href="/2017/09/03/kotlinproperty/" rel="next" title="kotlinproperty">
+    上一篇：kotlinproperty
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2017/09/03/kotlinBase/" rel="next" title="kotlinBase">
+    下一篇：kotlinBase
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="http://aduroidpc.tk/" target="_blank">阿杜</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2017 lushengzhu.tk, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=63696136" charset="UTF-8"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
