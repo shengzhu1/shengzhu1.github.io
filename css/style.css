@@ -216,7 +216,7 @@ main {
   color: #e91e63 !important;
 }
 .pink-link-context a:hover {
-  color: #f06292 !important;
+  color: #e91e63 !important;
 }
 .purple-link-context a {
   color: #9c27b0 !important;
@@ -312,7 +312,7 @@ main {
   color: #9e9e9e !important;
 }
 .grey-link-context a:hover {
-  color: #e0e0e0 !important;
+  color: #e91e63 !important;
 }
 .blue-grey-link-context a {
   color: #607d8b !important;
