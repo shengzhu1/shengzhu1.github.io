@@ -7,13 +7,19 @@
 
     
 
-    <title>归档：2017/9 | </title>
+    <title>Hello Git | </title>
     
+    
+    <meta name="description" content="git学习地址
+Git结构1Git分为5个工作区域分辨是stash、workspace、index、local、remote
+stash-暂存区1在处理其他事情时隐藏修改的地方
+workspace1本地工作空间
+index1你想提交的文件，在调用commit之前，你需要通过git add方法，把文件">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Hello Git"/>
     <meta property="og:site_name" content="笔记"/>
 
     
@@ -137,6 +143,14 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/git/">
+                    git <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/kotlin/">
                     kotlin <span class="right">6 篇</span></a>
                 </a>
@@ -167,70 +181,83 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/git/">git</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Hello Git</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2019-06-04T14:14:50.000Z"><a href="/2019/06/04/Hello-Git/">2019-06-04</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/git/" class="chip pink lighten-1">git</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2017
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2017/09/07/kotlin特性/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-06T17:50:42.000Z">2017-09-07</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlin特性
-                            </a>
-                        
-                            <a href="/2017/09/06/kotlinMethod/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-05T17:47:08.000Z">2017-09-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlinMethod
-                            </a>
-                        
-                            <a href="/2017/09/04/kotlinGeneric/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-04T15:11:55.000Z">2017-09-04</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlinGeneric
-                            </a>
-                        
-                            <a href="/2017/09/03/kotlinproperty/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-03T15:17:57.000Z">2017-09-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlinproperty
-                            </a>
-                        
-                            <a href="/2017/09/03/kotlinclass/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-03T15:17:40.000Z">2017-09-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlinclass
-                            </a>
-                        
-                            <a href="/2017/09/03/kotlinBase/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-09-02T16:23:04.000Z">2017-09-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                kotlinBase
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Git结构"><span class="section table-of-contents-text">Git结构</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#stash-暂存区"><span class="section table-of-contents-text">stash-暂存区</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#workspace"><span class="section table-of-contents-text">workspace</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#index"><span class="section table-of-contents-text">index</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#local"><span class="section table-of-contents-text">local</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#remote"><span class="section table-of-contents-text">remote</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p><a href="http://ndpsoftware.com/git-cheatsheet.html" target="_blank" rel="noopener">git学习地址</a></p>
+<h1 id="Git结构"><a href="#Git结构" class="headerlink" title="Git结构"></a>Git结构</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git分为5个工作区域分辨是stash、workspace、index、local、remote</span><br></pre></td></tr></table></figure>
+<h2 id="stash-暂存区"><a href="#stash-暂存区" class="headerlink" title="stash-暂存区"></a>stash-暂存区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在处理其他事情时隐藏修改的地方</span><br></pre></td></tr></table></figure>
+<h2 id="workspace"><a href="#workspace" class="headerlink" title="workspace"></a>workspace</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本地工作空间</span><br></pre></td></tr></table></figure>
+<h2 id="index"><a href="#index" class="headerlink" title="index"></a>index</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你想提交的文件，在调用commit之前，你需要通过git add方法，把文件加入到这个区域</span><br></pre></td></tr></table></figure>
+<h2 id="local"><a href="#local" class="headerlink" title="local"></a>local</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在项目下.git文件夹中，包含所有必要的repository文件</span><br></pre></td></tr></table></figure>
+<h2 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">您的项目的版本托管在Internet或网络上，确保您的所有更改都可供其他开发人员使用，默认名称origin</span><br></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2017/09/07/kotlin特性/" rel="next" title="kotlin特性">
+    下一篇：kotlin特性
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
@@ -256,7 +283,7 @@
             <div class="col m8 s12">
                 <h5 class="white-text">友情链接</h5>
                 
-                    <a class="social-link" href="http://aduroidpc.tk/" target="_blank">阿杜</a>
+                    <a class="social-link" href="http://aduroidpc.top/" target="_blank">阿杜</a>
                 
                     <a class="social-link" href="https://www.lollipoppp.com/" target="_blank">Lollipop</a>
                 

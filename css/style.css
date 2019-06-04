@@ -216,7 +216,7 @@ main {
   color: #e91e63 !important;
 }
 .pink-link-context a:hover {
-  color: #e91e63 !important;
+  color: #f06292 !important;
 }
 .purple-link-context a {
   color: #9c27b0 !important;
@@ -312,7 +312,7 @@ main {
   color: #9e9e9e !important;
 }
 .grey-link-context a:hover {
-  color: #e91e63 !important;
+  color: #e0e0e0 !important;
 }
 .blue-grey-link-context a {
   color: #607d8b !important;
@@ -521,7 +521,7 @@ a.social-link {
   margin-right: 10px;
 }
 a.social-link:hover {
-  color: #e91e63;
+  color: #e0e0e0;
 }
 .footer-container {
   padding-top: 20px;
