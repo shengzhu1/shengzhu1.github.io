@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git-stash]]></title>
+    <url>%2F2019%2F06%2F05%2Fgit-stash%2F</url>
+    <content type="text"><![CDATA[stash-暂存区1在处理其他事情时隐藏修改的地方,与stash相关的git区域：workspace、local 查看暂存1、git stash list123Demo结果显示如下：stash@&#123;0&#125;: On master: save with msgstash@&#123;1&#125;: WIP on master: ea810c8 add a.txt 2、git stash show [stash]12Demo显示如下：git stash show stash@&#123;0&#125; 3、git stash drop [stash]12Demo显示如下：git stash show stash@&#123;0&#125; 4、git stash clear1清除stash区域 从workspace添加到stash1、git stash save [msg] 123456workspace中的内容需要commit之后修改的才能进行save，默认git stash也会进行保存，使用git stash save [msg]可以带上提示信息，先后进行以下两个操作1、git stash 2、git stash save &quot;save with msg&quot;使用git stash list显示如下stash@&#123;0&#125;: On master: save with msgstash@&#123;1&#125;: WIP on master: ea810c8 add a.txt 猜想：stash是在队列头部插入数据 将stash还原到workspace1、git stash apply [stash] 12git stash apply stash@&#123;0&#125;将制定的stash记录还原到workspace，不删除stash记录 2、git stash pop 1将最后一个stash记录取出放到workspace，不删除stash记录 将stash 直接提交到localgit stash branch [stash] 123新建并checkout一个新分支&lt;branchname&gt;，分支开始于stash建立时的源提交，stash的变化作为熄灯呢工作区和暂存区。不制定stash时，使用最后一个stash，如果操作成功，则从stash删除本条记录。Demo:git stash branch stashCommit stash@&#123;0&#125;]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello Git]]></title>
     <url>%2F2019%2F06%2F04%2FHello-Git%2F</url>
     <content type="text"><![CDATA[git学习地址 Git结构1Git分为5个工作区域分辨是stash、workspace、index、local、remote stash-暂存区1在处理其他事情时隐藏修改的地方 workspace1本地工作空间 index1你想提交的文件，在调用commit之前，你需要通过git add方法，把文件加入到这个区域 local1在项目下.git文件夹中，包含所有必要的repository文件 remote1您的项目的版本托管在Internet或网络上，确保您的所有更改都可供其他开发人员使用，默认名称origin]]></content>
