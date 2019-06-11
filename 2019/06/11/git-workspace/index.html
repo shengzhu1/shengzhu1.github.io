@@ -7,13 +7,16 @@
 
     
 
-    <title>kotlin | </title>
+    <title>git-workspace | </title>
     
+    
+    <meta name="description" content="in workspacestatus1234显示状态变化，包括1、index和当前HEAD提交之间（即将提交的）2、workspace和index3、未被git追踪的
+diff lt commit or branch gt1显示未添加到index的不同，不填 [commit or branch] 则">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="git-workspace"/>
     <meta property="og:site_name" content="笔记"/>
 
     
@@ -175,60 +178,84 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
         <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/git/">git</a>
+
 
         
-            <a class="breadcrumb" href="/categories/kotlin/">kotlin</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>git-workspace</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2019-06-11T14:14:54.000Z"><a href="/2019/06/11/git-workspace/">2019-06-11</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2017/09/07/kotlin特性/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-06T17:50:42.000Z">2017-09-07</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlin特性
-            </a>
-        
-            <a href="/2017/09/06/kotlinMethod/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-05T17:47:08.000Z">2017-09-06</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlinMethod
-            </a>
-        
-            <a href="/2017/09/04/kotlinGeneric/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-04T15:11:55.000Z">2017-09-04</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlinGeneric
-            </a>
-        
-            <a href="/2017/09/03/kotlinproperty/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-03T15:17:57.000Z">2017-09-03</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlinproperty
-            </a>
-        
-            <a href="/2017/09/03/kotlinclass/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-03T15:17:40.000Z">2017-09-03</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlinclass
-            </a>
-        
-            <a href="/2017/09/03/kotlinBase/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-09-02T16:23:04.000Z">2017-09-03</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                kotlinBase
-            </a>
+            <a href="/tags/git/" class="chip pink lighten-1">git</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#in-workspace"><span class="section table-of-contents-text">in workspace</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#status"><span class="section table-of-contents-text">status</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#diff-lt-commit-or-branch-gt"><span class="section table-of-contents-text">diff lt commit or branch gt</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#clean"><span class="section table-of-contents-text">clean</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#to-local"><span class="section table-of-contents-text">to local</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#commit-a-m-‘msg’"><span class="section table-of-contents-text">commit -a [-m ‘msg’]</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#to-index"><span class="section table-of-contents-text">to index</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#add-file-or-dir"><span class="section table-of-contents-text">add [file or dir]</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#add-u"><span class="section table-of-contents-text">add -u</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#rm-file-s"><span class="section table-of-contents-text">rm    [file(s)]</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#mv-file-s"><span class="section table-of-contents-text">mv    [file(s)]</span></a></li></ol></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="in-workspace"><a href="#in-workspace" class="headerlink" title="in workspace"></a>in workspace</h1><h3 id="status"><a href="#status" class="headerlink" title="status"></a>status</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">显示状态变化，包括</span><br><span class="line">1、index和当前HEAD提交之间（即将提交的）</span><br><span class="line">2、workspace和index</span><br><span class="line">3、未被git追踪的</span><br></pre></td></tr></table></figure>
+<h3 id="diff-lt-commit-or-branch-gt"><a href="#diff-lt-commit-or-branch-gt" class="headerlink" title="diff lt commit or branch gt"></a>diff lt commit or branch gt</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示未添加到index的不同，不填 [commit or branch] 则使用与HEAD对比</span><br></pre></td></tr></table></figure>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从单签文件夹开始地柜清理不收版本控制管理的内容</span><br></pre></td></tr></table></figure>
+<h1 id="to-local"><a href="#to-local" class="headerlink" title="to local"></a>to local</h1><h3 id="commit-a-m-‘msg’"><a href="#commit-a-m-‘msg’" class="headerlink" title="commit -a [-m ‘msg’]"></a>commit -a [-m ‘msg’]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">提交上次提交之后的所有修改</span><br><span class="line">1、未被git追踪的除外</span><br><span class="line">2、从index区域删除已被workspace删除的文件</span><br></pre></td></tr></table></figure>
+<h1 id="to-index"><a href="#to-index" class="headerlink" title="to index"></a>to index</h1><h3 id="add-file-or-dir"><a href="#add-file-or-dir" class="headerlink" title="add [file or dir]"></a>add [file or dir]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加当前的新内容或是修改的文件到index，作为下次提交的内容，用add --interactive来交互式操作</span><br></pre></td></tr></table></figure>
+<h3 id="add-u"><a href="#add-u" class="headerlink" title="add -u"></a>add -u</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加当前的修改的文件（不含新文件）到index，和git commit -a 准备提交内容的方式一致</span><br></pre></td></tr></table></figure>
+<h3 id="rm-file-s"><a href="#rm-file-s" class="headerlink" title="rm    [file(s)]"></a>rm    [file(s)]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从workspace和index删除某个文件</span><br></pre></td></tr></table></figure>
+<h3 id="mv-file-s"><a href="#mv-file-s" class="headerlink" title="mv    [file(s)]"></a>mv    [file(s)]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从workspace和index移动某个文件</span><br></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2019/06/05/git-stash/" rel="next" title="git-stash">
+    下一篇：git-stash
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>

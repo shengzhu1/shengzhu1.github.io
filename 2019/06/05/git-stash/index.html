@@ -10,7 +10,7 @@
     <title>git-stash | </title>
     
     
-    <meta name="description" content="stash-暂存区1在处理其他事情时隐藏修改的地方,与stash相关的git区域：workspace、local
+    <meta name="description" content="stash-存档库1在处理其他事情时隐藏修改的地方,与stash相关的git区域：workspace、local
 查看暂存1、git stash list123Demo结果显示如下：stash@&amp;#123;0&amp;#125;: On master: save with msgstash@&amp;#123;1&amp;">
     
     
@@ -141,7 +141,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/git/">
-                    git <span class="right">2 篇</span></a>
+                    git <span class="right">3 篇</span></a>
                 </a>
             </li>
 
@@ -223,12 +223,12 @@
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#stash-暂存区"><span class="section table-of-contents-text">stash-暂存区</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#查看暂存"><span class="section table-of-contents-text">查看暂存</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#从workspace添加到stash"><span class="section table-of-contents-text">从workspace添加到stash</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#将stash还原到workspace"><span class="section table-of-contents-text">将stash还原到workspace</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#将stash-直接提交到local"><span class="section table-of-contents-text">将stash 直接提交到local</span></a></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#stash-存档库"><span class="section table-of-contents-text">stash-存档库</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#查看暂存"><span class="section table-of-contents-text">查看暂存</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#从workspace添加到stash"><span class="section table-of-contents-text">从workspace添加到stash</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#将stash还原到workspace"><span class="section table-of-contents-text">将stash还原到workspace</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#将stash-直接提交到local"><span class="section table-of-contents-text">将stash 直接提交到local</span></a></li></ol></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <h1 id="stash-暂存区"><a href="#stash-暂存区" class="headerlink" title="stash-暂存区"></a>stash-暂存区</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在处理其他事情时隐藏修改的地方,与stash相关的git区域：workspace、local</span><br></pre></td></tr></table></figure>
+                <h1 id="stash-存档库"><a href="#stash-存档库" class="headerlink" title="stash-存档库"></a>stash-存档库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在处理其他事情时隐藏修改的地方,与stash相关的git区域：workspace、local</span><br></pre></td></tr></table></figure>
 <h2 id="查看暂存"><a href="#查看暂存" class="headerlink" title="查看暂存"></a>查看暂存</h2><p>1、git stash list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Demo结果显示如下：</span><br><span class="line">stash@&#123;0&#125;: On master: save with msg</span><br><span class="line">stash@&#123;1&#125;: WIP on master: ea810c8 add a.txt</span><br></pre></td></tr></table></figure></p>
 <p>2、git stash show [stash]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Demo显示如下：</span><br><span class="line">git stash show stash@&#123;0&#125;</span><br></pre></td></tr></table></figure></p>
 <p>3、git stash drop [stash]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Demo显示如下：</span><br><span class="line">git stash show stash@&#123;0&#125;</span><br></pre></td></tr></table></figure></p>
@@ -244,6 +244,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新建并checkout一个新分支&lt;branchname&gt;，分支开始于stash建立时的源提交，stash的变化作为熄灯呢工作区和暂存区。不制定stash时，使用最后一个stash，如果操作成功，则从stash删除本条记录。</span><br><span class="line">Demo:</span><br><span class="line">git stash branch stashCommit stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
 
                 
+<p class="pink-link-context">
+    <a href="/2019/06/11/git-workspace/" rel="next" title="git-workspace">
+    上一篇：git-workspace
+  </a>
+</p>
+
 
 
 <p class="pink-link-context">
